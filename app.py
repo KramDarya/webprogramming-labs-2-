@@ -96,5 +96,8 @@ def nstu ():
 
 @app.route("/lab2/example")
 def example ():
-    name = 'Крамар Дарья'
-    return render_template('example.html', name=name)
+    name = 'Крамар Дарья, Проворова Елена'
+    nomerl = '2'
+    gruppa = '11'
+    nomerk = '3'
+    return render_template('example.html', name=name, nomerl=nomerl, gruppa=gruppa, nomerk=nomerk)
