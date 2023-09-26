@@ -22,7 +22,9 @@ def menu ():
         <h1>Лабораторные работы по WEB-программированию</h1>
         <ol>
             <li><a href="/lab1" target="_blank">
-                Лабораторная работа 1</a></li>   
+                Лабораторная работа 1</a></li> 
+            <li><a href="/lab2/" target="_blank">
+                Лабораторная работа 2</a></li>   
         </ol>
     </main>
         <h1>web-сервер на flask</h1>
@@ -119,3 +121,10 @@ def example ():
     return render_template('example.html',
                             name=name, nomerl=nomerl, gruppa=gruppa,
                             nomerk=nomerk, fruits=fruits, books=books)
+@app.route("/lab2/")
+def lab2 ():
+    return render_template('lab2.html')
+@app.route("/lab2/series")
+def series ():
+    return render_template('series.html')
+    
