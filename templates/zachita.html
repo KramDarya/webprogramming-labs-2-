@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block main %}
+
+<h2>Задание for23</h2>
+
+
+<div>Вещественное число: </div> <input type="number" name="vch1" value="1">
+<div>Целое число: </div> <input type="number" name="ch1" value="1">
+<div>Полученное число = {{ summ }}</div>
+
+<div>
+    <button type="submit">Отправить</button>
+</div>
+
+<h2>Задание if19</h2>
+
+<div>Индекс переменной отличной от других: {{ g }}</div> 
+
+{% endblock %}
