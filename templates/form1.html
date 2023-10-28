@@ -3,6 +3,7 @@
 {% block lab %}Лабораторная работа 3{% endblock %}
 
 {% block main %}
+<a href="/lab3">Вернуться к лабораторной работе 3</a>
 
     {% if user %}
 
@@ -12,7 +13,7 @@
     <div>Ваш возраст: {{ age }}</div>
     <div>Ваш пол: {{ 'мужской' if sex == 'male' else 'женский' }}</div>
     <div>
-        <a href="lab3/form1">Заново</a>
+        <a href="/lab3/form1">Заново</a>
     </div>
 
     {% else %}
@@ -23,16 +24,13 @@
         <label>Ваше имя:</label>
         <div>
             <input type="text" placeholder="Как вас зовут?" name="user" value="{{ user or '' }}">
-            {{ errors.user }}
+            <span class="error">{{ errors.user }}</span>
         </div>
-        <div>
-            <button type="submit">Отправить</button>
-        </div>
-
+        
         <label>Ваш возраст:</label>
         <div>
             <input type="number" name="age" value="{{ age or '' }}">
-            {{ errors.age }}
+            <span class="error">{{ errors.age }}</span>
         </div>
 
         <label>Ваш пол:</label>
@@ -41,6 +39,10 @@
                 <option value="male" {{ sex == 'male' and 'selected' }}>мужчина</option>
                 <option value="female" {{ sex == 'female' and 'selected' }}>женщина</option>
             </select>
+        </div>
+        {{ error }}
+        <div>
+            <button type="submit">Отправить</button>
         </div>
     </form>
 
