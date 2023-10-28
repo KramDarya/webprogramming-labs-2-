@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 4{% endblock %}
+
+{% block style %}
+<style>
+    .vhod {
+        padding: 20px;
+        border: solid 3px rebeccapurple;
+        text-align: center;
+        text-align: center;
+        width: fit-content;
+    }
+
+    div {
+        padding: 10px;
+        font-size: larger;
+        font-weight: bolder;
+        font-style: italic;
+    }
+
+    </style>
+{% endblock %}
+
+{% block main %}
+<a href="/lab4/">Вернуться к лабораторной работе 4</a>
+
+    <h1>Вход</h1>
+    <h2>Пожалуйста, авторизуйтесь</h2>
+    <div>{{ err }}</div>
+    <form class="vhod" method="post">
+        <div>
+            <label for="username">Пользователь:</label>
+            <input type="text" id="username" name="username" value="{{ username or '' }}" required>
+            {{ error }}
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" value="{{ password or '' }}" required>
+            {{ error }}
+        </div>
+        <div>
+            <button type="submit">Войти</button>
+            <button type="reset">Отмена</button>
+        </div>
+    </form>
+{% endblock %}

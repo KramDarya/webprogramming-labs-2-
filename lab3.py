@@ -65,3 +65,26 @@ def bilet():
     data = request.args.get('data')
     return render_template('bilet.html', user=user, age=age, vyezs=vyezs, nazn=nazn, polka=polka, bag=bag, data=data)
 
+@lab3.route("/lab3/zachita/<int:h1>/<int:h2>/<int:h3>/<int:h4>/")
+def zachita (h1, h2, h3, h4):
+    vch1 = request.args.get('vch')
+    ch1 = request.args.get('ch')
+    vch = float(vch1)
+    ch = int(ch2)
+    summ = vch
+    for i in range(1, ch):
+        factorial = 1
+        for u in range(2*i+2):
+            factorial += factorial*u
+        summ += ((-1)**i)*(vch**(2*i+1))/factorial
+
+
+    m = [h1, h2, h3, h4]
+    for i in range(4):
+        if(i<=2) and (m[i] == m[i+1]):
+            k = m[i]
+    for i in range(4):
+        if m[i] != k:
+            g = i
+    return render_template('zachita.html', g=g, vch=vch, ch=ch, summ=summ)
+
