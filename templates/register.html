@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+<a href="/lab5/glavn">Вернуться к лабораторной работе</a><br>
+<a href="/menu">Вернуться в меню</a>
+
+
+<form method="POST">
+    <h1>Страница регистрации</h1>
+
+    <div class="error">{{ errors }}</div>
+
+    <div>
+        <label for="username">Логин</label>
+        <input type="text" name="username" placeholder="username">
+    </div>
+   
+    <div>
+        <label for="password">Пароль</label>
+        <input type="text" name="password" placeholder="password">
+    </div>
+    
+    <button type="submit">Зарегистрироваться</button>
+</form>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+<a href="/lab5">Вернуться к лабораторной работе</a><br>
+<a href="/menu">Вернуться в меню</a>
+
+
+<style>
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -200px;
+    margin-top: 50px;
+    color: blueviolet;
+} 
+
+.dmenu {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+    
+.m {
+   text-decoration: none;
+    color: black; 
+    color: turquoise;
+}
+
+.b1, .b2, .b3 {
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: aquamarine;
+}
+    
+.b1:hover, .b2:hover, .b3:hover {
+    text-decoration: underline;
+} 
+    
+
+</style>
+
+<div class="menu">
+    <div class="dmenu" style="font-weight: bolder; font-size: larger;
+                        text-align: left; width: 20%;">База знаний</div>
+    <div class="dmenu"><a class="m" href="/lab5/articles">Статьи</a></div>
+
+    <div class="dmenu"><a class="m" href="/lab5/user_articles">Просмотреть заметки</a></div>
+
+    <div class="dmenu"><a class="m" href="/lab5/new_articles">Создать заметку</a></div>
+
+    <div class="dmenu">
+        <form action="/lab5/login"><button class="b1">Логин</button></form>
+    </div>
+
+    <div class="dmenu">
+        <form action="/lab5/register"><button class="b2">Регистрация</button></form>
+    </div>
+
+    <div class="dmenu">
+        <form action="/lab5/exit"><button class="b3">Выход</button></form>
+    </div>
+
+    <div>
+    <h1>Календарь</h1>
+    <table>
+        <tr>
+            <th>День недели</th>
+            <th>Дата</th>
+        </tr>
+        {% for date in week_dates %}
+        <tr>
+            <td>{{ date.strftime('%A') }}</td>
+            <td>{{ date.strftime('%Y-%m-%d') }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+    <div class="dmenu" style="display: inline-block; text-align: right; width: 10%">{{ username }}</div>
+</div>
+
+<h1 style="text-align: center; color: blueviolet;">Добро пожаловать в базу знаний</h1>
+{% endblock %}

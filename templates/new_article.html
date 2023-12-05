@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 5{% endblock %}
+
+{% block main %}
+<a href="/lab5/glavn">Вернуться к лабораторной работе</a><br>
+<a href="/menu">Вернуться в меню</a>
+
+<div>
+<h1>Новая заметка</h1>
+    <form method="POST">
+        <input name="title_article" type="text" placeholder="Название статьи">
+        <textarea name="text_article" placeholder="Текст статьи" rows="20"></textarea>
+        <input type="submit" value=Сохранить>
+    </form>
+</div>
+
+{% endblock %}
