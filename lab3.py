@@ -50,6 +50,22 @@ def pay ():
 def success ():
     return render_template('success.html')
 
+@lab3.route("/lab3/calk")
+def calk ():
+    return render_template('calk.html')
+
+
+@lab3.route("/lab3/count")
+def count ():
+    result = 0
+    x = int(request.args.get('x'))  
+    y = int(request.args.get('y'))   
+    z = int(request.args.get('z'))   
+    
+    result = 2 * x + 8 * y + 7 * z
+
+    return render_template('count.html', result = result)
+
 @lab3.route("/lab3/form2")
 def form2 ():
     return render_template('form2.html')

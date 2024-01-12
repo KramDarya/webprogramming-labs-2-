@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{% block style %}
+<style>
+    .napitok {
+        padding: 20px;
+        border: solid 3px rebeccapurple;
+        text-align: center;
+        text-align: center;
+        width: fit-content;
+    }
+
+    div {
+        padding: 10px;
+        font-size: larger;
+        font-weight: bolder;
+        font-style: italic;
+    }
+
+    </style>
+{% endblock %}
+
+{% block main %}
+<a href="/lab3">Вернуться к лабораторной работе 3</a>
+    <h1>Оплата</h1>
+
+    <div>
+        Сумма к оплате: {{ result }}
+    </div>
+{% endblock %}

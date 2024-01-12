@@ -39,17 +39,9 @@ def glavn ():
  
     if 'username' in session: 
         visibleUser = session['username'] 
+
  
-    today = datetime.date.today() 
- 
-    # Вычисляем начало и конец текущей недели 
-    start_of_week = today - datetime.timedelta(days=today.weekday()) 
-    end_of_week = start_of_week + datetime.timedelta(days=6) 
- 
-    # Генерируем список дат недели 
-    week_dates = [start_of_week + datetime.timedelta(days=i) for i in range(7)] 
- 
-    return render_template('glavn.html', username=visibleUser, week_dates=week_dates)
+    return render_template('glavn.html', username=visibleUser)
 
 
 @lab5.route("/lab5/users") 

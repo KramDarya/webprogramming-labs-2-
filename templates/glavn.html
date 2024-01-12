@@ -64,21 +64,6 @@
         <form action="/lab5/exit"><button class="b3">Выход</button></form>
     </div>
 
-    <div>
-    <h1>Календарь</h1>
-    <table>
-        <tr>
-            <th>День недели</th>
-            <th>Дата</th>
-        </tr>
-        {% for date in week_dates %}
-        <tr>
-            <td>{{ date.strftime('%A') }}</td>
-            <td>{{ date.strftime('%Y-%m-%d') }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    </div>
     <div class="dmenu" style="display: inline-block; text-align: right; width: 10%">{{ username }}</div>
 </div>
 

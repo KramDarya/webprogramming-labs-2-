@@ -33,6 +33,8 @@ def menu ():
                 Лабораторная работа 4</a></li> 
             <li><a href="/lab5/glavn" target="_blank">
                 Лабораторная работа 5</a></li> 
+            <li><a href="/lab7/" target="_blank">
+                Лабораторная работа 7</a></li> 
         </ol>
     </main>
         <h1>web-сервер на flask</h1>
